@@ -1,0 +1,26 @@
+{
+  "name": "github-repos",
+  "version": "1.0.0",
+  "description": "QA Automation Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run ",
+    "headed": "cypress run --headed"
+  },
+  "author": "Edward Hernandez",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^15.1.5",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "cypress": "^12.17.3",
+    "multiple-cucumber-html-reporter": "^3.4.0",
+    "ts-loader": "^9.4.4"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/support/step_definitions/**/*.js",
+    "html": {
+      "enabled": true,
+      "output": "cypress/reports/cucumber-html/cucumber-report.html"
+    }
+  }
+}
